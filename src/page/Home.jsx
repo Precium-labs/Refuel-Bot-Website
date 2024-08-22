@@ -160,8 +160,8 @@ const Home = () => {
   return (
     <div>
       <Navbar2 />
-      <div className="pt-[120px] bg-[] lg:pt-[196px] pl-[30px] pr-[30px] lg-[0px] lg:pl-[100px] h-[100vh] relative overflow-hidden">
-        <div className="absolute right-0 bottom-0">
+      <div className="pt-[120px] bg-[] lg:pt-[196px] pl-[30px] pr-[30px] lg-[0px] lg:pl-[100px] lg:h-[100vh] relative overflow-hidden">
+        <div className="absolute right-0 bottom-0 lg:flex hidden">
           <img src={fuel} alt="" className="" />
         </div>
         <div className="absolute left-0 top-0" style={{ zIndex: -22 }}>
@@ -179,7 +179,7 @@ const Home = () => {
           operations running <br /> smoothly. Store funds and refuel instantly
           with our telegram Bot
         </p>
-        <div className="flex mt-[30px]">
+        <div className="flex lg:flex-row flex-col mt-[30px]">
           <div className="yellow_btn mr-[20px] lg:mr-[37px]">
             <p className="">Get Started</p>
           </div>
