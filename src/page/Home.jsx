@@ -160,7 +160,7 @@ const Home = () => {
   return (
     <div>
       <Navbar2 />
-      <div className="pt-[120px] bg-[] lg:pt-[196px] pl-[10px] lg:pl-[100px] h-[100vh] relative overflow-hidden">
+      <div className="pt-[120px] bg-[] lg:pt-[196px] pl-[30px] pr-[30px] lg-[0px] lg:pl-[100px] h-[100vh] relative overflow-hidden">
         <div className="absolute right-0 bottom-0">
           <img src={fuel} alt="" className="" />
         </div>
@@ -171,8 +171,10 @@ const Home = () => {
           <img src={frame3} alt="" className="" />
         </div>
 
-        <p className="text-[43px] lg:text-[86.5px]">Never run out of gas</p>
-        <p className="pt-[10px] lg:pt-[30px] text-xl">
+        <p className="text-[43px] font-[600] lg:text-[86.5px]">
+          Never run out of gas
+        </p>
+        <p className="pt-[10px] lg:pt-[30px] lg:text-xl">
           Top up your gas fees anytime, anywhere with and keep your crypto
           operations running <br /> smoothly. Store funds and refuel instantly
           with our telegram Bot
