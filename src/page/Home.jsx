@@ -179,7 +179,7 @@ const Home = () => {
               <span className="mr-2">Get started</span>
               <img src={telegramblack} alt="" className="w-5 h-5" /> 
             </button>
-            <button className="white_btn w-full sm:w-auto ">
+            <button className="white_btn w-full sm:w-auto " onClick={() => window.location.href = 'https://docs.refeulbot.xyz/'}>
               <span className="mr-2">Documentation</span>
               
             </button>
