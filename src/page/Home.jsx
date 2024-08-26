@@ -177,7 +177,7 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <button className="yellow_btn w-full sm:w-auto">Get Started</button>
             <button className="white_btn w-full sm:w-auto flex justify-center items-center">
-              <span className="mr-2">Get Started</span>
+              <span className="mr-2">Documentation</span>
               <img src={telegramblack} alt="" className="w-5 h-5" />
             </button>
           </div>
