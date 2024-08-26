@@ -1,10 +1,7 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
 import fuel from "../assets/refuel.png";
 import shadow from "../assets/shadow.png";
-import frame1 from "../assets/frame1.png";
-import frame2 from "../assets/frame2.png";
-import frame3 from "../assets/frame3.png";
 import telegramblack from "../assets/blacktelegram.png";
 import img from "../assets/blockchains/botxcoin.png";
 import img2 from "../assets/blockchains/celodolar.png";
@@ -31,7 +28,6 @@ import logo from "../assets/logo.png";
 import social1 from "../assets/socialsicon/github.png";
 import social2 from "../assets/socialsicon/telegram.png";
 import social3 from "../assets/socialsicon/twitter.png";
-import Navbar2 from "../components/Navbar2";
 
 const Home = () => {
   const data = [
@@ -157,40 +153,40 @@ const Home = () => {
     },
   ];
 
-  return (
-    <div>
-      <Navbar2 />
-      <div className="pt-[120px] bg-[] lg:pt-[196px] pl-[30px] pr-[30px] lg-[0px] lg:pl-[100px] lg:h-[100vh] relative overflow-hidden">
-        <div className="absolute right-0 bottom-0 lg:flex hidden">
-          <img src={fuel} alt="" className="" />
-        </div>
-        <div className="absolute left-0 top-0" style={{ zIndex: -22 }}>
-          <img src={shadow} alt="" className="" />
-        </div>
-        <div className="absolute left-0 top-0" style={{ zIndex: -22 }}>
-          <img src={frame3} alt="" className="" />
-        </div>
 
-        <p className="text-[43px] font-[600] lg:text-[86.5px]">
-          Never run out of gas
-        </p>
-        <p className="pt-[10px] lg:pt-[30px] lg:text-xl">
-          Top up your gas fees anytime, anywhere with and keep your crypto
-          operations running <br /> smoothly. Store funds and refuel instantly
-          with our telegram Bot
-        </p>
-        <div className="flex lg:flex-row flex-col mt-[30px]">
-          <div className="yellow_btn mr-[20px] lg:mr-[37px]">
-            <p className="">Get Started</p>
-          </div>
-          <div className="white_btn flex justify-center items-center">
-            <p className="mr-4">Get Started</p>
-            <img src={telegramblack} alt="" className="w-[21.39px] h-[22px]" />
+  return (
+    <>
+      {/* <Navbar /> */}
+    <div className="min-h-screen flex flex-col w-full">
+      <div className="relative overflow-hidden py-16 px-4 sm:px-6 lg:px-8 w-full">
+        <div className="absolute right-0 bottom-0 max-w-full">
+          <img src={fuel} alt="" className="w-full h-auto" />
+        </div>
+        <div className="absolute left-0 top-0 max-w-full">
+          <img src={shadow} alt="" className="w-full h-auto" />
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <h1 className="text-4xl sm:text-6xl lg:text-[86.5px] font-bold leading-tight mb-6">
+            Never run out of gas
+          </h1>
+          <p className="text-lg sm:text-xl mb-8">
+            Top up your gas fees anytime, anywhere and keep your crypto
+            operations running smoothly. Store funds and refuel instantly with
+            our telegram Bot
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="yellow_btn w-full sm:w-auto">Get Started</button>
+            <button className="white_btn w-full sm:w-auto flex justify-center items-center">
+              <span className="mr-2">Get Started</span>
+              <img src={telegramblack} alt="" className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </div>
-      <div className="py-[101px] lg:px-[84px]">
-        <p className="text-center pb-[43px] px-[30px] lg:[px-0px] text-[20px]">
+
+      
+     <div className="py-[101px] lg:px-[84px]">
+         <p className="text-center text-lg sm:text-3xl mt-16 font-semibold mb-8">
           Compatible with a wide range of digital assets and cryptocurrencies
         </p>
         <div
@@ -225,161 +221,194 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className="grid lg:grid-cols-2 bg-[#060806] text-[#fff] pt-[175px] px-[20px] lg:px-[120px] pb-[131px]">
-        <div>
-          <p className="font-[590] text-[60.71px]">How it works</p>
-          <p className="text-[18px]">
-            Step by Step guide on how to use the telegram bot
-          </p>
-          <div className="flex justify-center items-center">
-            <img
-              src={iphone}
-              alt=""
-              className="pt-[105px] w-[280px] h-[auto] lg:w-[auto] lg:h-[auto]"
-            />
+
+        {/* imported  */}
+      <div className="background-gradient text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h2 className="text-4xl sm:text-5xl font-semibold mb-4">
+                How it works
+              </h2>
+              <p className="text-lg mb-8">
+                Step by Step guide on how to use the telegram bot
+              </p>
+              <img src={iphone} alt="" className="max-w-full h-auto" />
+            </div>
+            <div className="space-y-8 sm:mt-24">
+              {data2.map((val, i) => (
+                // <div key={i} className="flex items-start">
+                //   <div className="bg-[#F2A700] w-16 h-16 flex-shrink-0 rounded-full flex justify-center items-center mr-4">
+                //     <p className="text-2xl font-bold">{i + 1}</p>
+                //   </div>
+                //   <div className="border border-white p-4 flex-grow">
+                //     <p className="text-xl font-semibold mb-2">{val.text1}</p>
+                //     <p>{val.text2}</p>
+                //   </div>
+                // </div>
+                <div className="flex items-center relative">
+             <div className={`${i != 2 ? "line line1" : ""}`}></div>
+             <div className={`${i != 2 ? "line line2" : ""}`}></div>
+             <div className={`${i != 2 ? "line line3" : ""}`}></div>
+             <div className={`${i != 2 ? "line line4" : ""}`}></div>
+             <div className={`${i != 2 ? "line line5" : ""}`}></div>
+             <div className={`${i != 2 ? "line line5" : ""}`}></div>
+             <div className={`${i != 2 ? "line line6" : ""}`}></div>
+             <div className={`${i != 2 ? "line line7" : ""}`}></div>
+             {/* <div className={`${i != 2 ? "line line8" : ""}`}></div> */}
+             {/* <div className={`${i != 2 ? "line line9" : ""}`}></div> */}
+
+             <div className="circle bg-[#F2A700] w-[54px] h-[54px] flex justify-center items-center mr-[66px]">
+               <p className="text-[20.34px] font-[700]">{i + 1}</p>
+             </div>
+             <div className=" h-[212px] flex flex-col justify-center align-center text-center border">
+               <p className="text-[34.87px]">{val.text1}</p>
+               <p className="text-[16px] p-5">{val.text2}</p>
+             </div>
+           </div>
+              ))}
+            </div>
           </div>
         </div>
-        <div className="">
-          {data2.map((val, i) => (
-            <div className="flex items-center mx-[20px] my-[20px] lg:mx-[66.67px] lg:my-[66.67px] relative">
-              {window.innerWidth > 500 && (
-                <>
-                  <div className={`${i != 2 ? "line line1" : ""}`}></div>
-                  <div className={`${i != 2 ? "line line2" : ""}`}></div>
-                  <div className={`${i != 2 ? "line line3" : ""}`}></div>
-                  <div className={`${i != 2 ? "line line4" : ""}`}></div>
-                  <div className={`${i != 2 ? "line line5" : ""}`}></div>
-                  <div className={`${i != 2 ? "line line5" : ""}`}></div>
-                  <div className={`${i != 2 ? "line line6" : ""}`}></div>
-                  <div className={`${i != 2 ? "line line7" : ""}`}></div>
-                  <div className={`${i != 2 ? "line line8" : ""}`}></div>
-                  <div className={`${i != 2 ? "line line9" : ""}`}></div>
+      </div>
 
-                  <div className="circle bg-[#F2A700] w-[94.24px] h-[94.24px] flex justify-center items-center mr-[66px]">
-                    <p className="text-[40.34px] font-[700]">{i + 1}</p>
-                  </div>
-                </>
-              )}
-              <div className="lg:w-[366px] h-[312px] px-[20px] flex flex-col justify-center align-center text-center border">
-                <p className="text-[34.87px]">{val.text1}</p>
-                <p className="text-[16px]">{val.text2}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="pt-[163px] pb-[243px] px-[30px] lg:px-[129px] ">
-        <p className="text-center text-[60.71px] font-[590] mb-[105px]">
+    
+
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl sm:text-5xl font-semibold text-center mb-12">
           Features
-        </p>
-        <div className="grid lg:grid-cols-2 gap-[32px]">
-          {dataFeatures.map((val) => (
-            <div className="flex bg-[#061417] h-[278px] border2 px-[13px] lg:px-[66px] py-[83px]">
-              <div className="bg-[#F2A700] p-[20px] rounded-full  w-[70px] h-[70px] lg:w-[89px] lg:h-[89px] flex items-center justify-center ">
-                <img
-                  src={val.pathname}
-                  alt=""
-                  style={{
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
-              <div>
-                <p className="ml-[27px] text-white text-[20px] lg:text-[34.87px]">
-                  {val.text1}
-                </p>
-                <p className="text-white  ml-[27px]">{val.text2}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className={``}>
-        <p className="text-[30px] lg:text-[60.71px] font-[590] text-center">
-          Testimonials
-        </p>
-        <p className="text-[16px] lg:text-[18px] font-[400 text-center">
-          Reviews from users who have benefited from using the Refuel Bot.
-        </p>
-        {/* <marquee width={window.innerWidth} direction="left" height="auto"> */}
-        <div
-          className={`flex lg:grid lg:grid-cols-4 gap-x-20 mt-[50px] lg:mt-[107px] min-w-[${"600px"}] overflow-x-scroll scrollable-container`}
-        >
-          {dataTestimonials.map((val, i) => (
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8 py-7">
+          {dataFeatures.map((val, i) => (
             <div
               key={i}
-              className={`border3 ml-[24px] pl-[24px] pr-[26px] pt-[41px] pb-[24px] lg:mb-[24px] min-w-[377px]
-                ${
-                  i + 1 > Math.round(dataTestimonials.length / 2)
-                    ? "lg:ml-[50%]"
-                    : ""
-                }
-                `}
+              className="bg-[#061417] p-6 rounded-2xl flex items-start py-16"
             >
-              <img src={quote} alt="" className="pb-[16px]" />
-              <p className="">
-                Refuel Bot has been a lifesaver! I can trade without worrying
-                about gas fees interrupting my strategy.
+              <div className="bg-[#F2A700] rounded-full w-16 h-16 flex-shrink-0 flex items-center justify-center mr-4">
+                <img src={val.pathname} alt="" className="w-8 h-8" />
+              </div>
+              <div>
+                <p className="text-white text-2xl sm:text-3xl font-semibold mb-2">
+                  {val.text1}
+                </p>
+                <p className="text-white">{val.text2}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+
+      {/* original  */}
+       <div className="py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <p className="text-[60.71px] font-[590] text-center">Testimonials</p>
+        <p className="text-[18px] font-[400 text-center">
+          Reviews from users who have benefited from using the Refuel Bot.
+        </p>
+        
+        <div className="flex overflow-x-auto pb-4 space-x-6 my-6">
+          {dataTestimonials.map((val, i) => (
+            <div key={i} className="flex-shrink-0 w-80 border3 p-6 rounded-lg">
+              <img src={quote} alt="" className="mb-4" />
+              <p className="mb-6">
+                Refuel Bot has been a lifesaver! I can trade without worrying about gas fees interrupting my strategy.
               </p>
-              <div className="flex mt-[44px] justify-center items-center">
-                <img src={human} alt="" />
-                <div className="ml-[24px]">
-                  <p>John Doe</p>
-                  <p>CEO at FinTech Solutions</p>
+              <div className="flex items-center">
+                <img src={human} alt="" className="w-12 h-12 rounded-full mr-4" />
+                <div>
+                  <p className="font-semibold">John Doe</p>
+                  <p className="text-sm">CEO at FinTech Solutions</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
-        {/* </marquee> */}
       </div>
-      <div className="pt-[243px] mb-[203px]">
-        <div className="bg-[#060806] lg:rounded-[20px] relative lg:mx-[61px] pt-[150px] pb-[100px] flex flex-col items-center justify-center">
+
+            {/* imported  */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#060806] rounded-2xl relative p-8 sm:p-16 flex flex-col items-center justify-center text-center">
           <img
             src={telegramblue}
             alt=""
-            className="absolute left-[30px] lg:left-[90px] bottom-[-10px] w-[100px] lg:w-auto"
+            className="absolute left-0 bottom-0 w-24 sm:w-36 h-auto"
           />
           <img
             src={telegramblue2}
             alt=""
-            className="absolute right-[0] top-[-0px] w-[130px] lg:w-auto"
+            className="absolute right-0 top-0 w-24 sm:w-52 h-auto"
           />
-          <p className="text-white text-[30px] lg:text-[60.71px] font-[590]">
+          <h2 className="text-white text-4xl sm:text-5xl font-semibold mb-6">
+            Try Refuel Bot Now
+          </h2>
+          <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
+            Get started now and keep your crypto journey moving forward without
+            interruption. Download the telegram bot to get started
+          </p>
+          <button className="bg-[#F2A700] text-white py-3 px-8 rounded-lg text-lg font-semibold">
+            Download Telegram Bot
+          </button>
+        </div>
+      </div>
+
+      {/* original  */}
+          {/* <div className="pt-[243px] mb-[203px]">
+        <div className="bg-[#060806] rounded-[20px] relative mx-[61px] pt-[150px] pb-[100px] flex flex-col items-center justify-center">
+          <img
+            src={telegramblue}
+            alt=""
+            className="absolute left-[90px] bottom-[-10px]"
+          />
+          <img
+            src={telegramblue2}
+            alt=""
+            className="absolute right-0 top-[-0px]"
+          />
+          <p className="text-white text-[60.71px] font-[590]">
             Try Refuel Bot Now
           </p>
           <p
-            className="text-white text-[16px] lg:text-[18px] text-center pt-[27px] pb-[30px]"
+            className="text-white text-[18px] text-center pt-[27px] pb-[30px]"
             style={{ lineHeight: "30px", letterSpacing: "1.5px" }}
           >
             Get started now and keep your crypto journey moving forward without{" "}
             <br />
             interruption. Download the telegram bot to get started
           </p>
-          <button className="bg-[#F2A700] text-white py-[20px] px-[25px] lg:px-[50px]">
+          <button className="bg-[#F2A700] text-white py-[20px] px-[50px]">
             Download Telegram Bot
           </button>
         </div>
-      </div>
-      <div className="footer grid lg:grid-cols-3 grid-cols-1  items-center pb-[91px] px-[101px]">
-        <div className="flex justify-center md:justify-left mb-[20px] lg:mb-0">
-          <img src={logo} alt="" />
+      </div> */}
+
+      <footer className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+          <div>
+            <img src={logo} alt="Logo" className="h-8" />
+          </div>
+          <div className="flex flex-wrap justify-center gap-6">
+            <a href="#" className="font-medium">
+              About
+            </a>
+            <a href="#" className="font-medium">
+              Help Centre
+            </a>
+            <a href="#" className="font-medium">
+              Privacy
+            </a>
+            <a href="#" className="font-medium">
+              Terms
+            </a>
+          </div>
+          <div className="flex space-x-4">
+            <img src={social1} alt="" className="w-6 h-6" />
+            <img src={social2} alt="" className="w-6 h-6" />
+            <img src={social3} alt="" className="w-6 h-6" />
+          </div>
         </div>
-        <div className="grid lg:grid-cols-4 justify-center items-center">
-          <p className="font-[500] text-center mb-[20px] lg:mb-0">About</p>
-          <p className="font-[500] text-center mb-[20px] lg:mb-0">
-            Help Centre
-          </p>
-          <p className="font-[500] text-center mb-[20px] lg:mb-0">Privacy</p>
-          <p className="font-[500] text-center mb-[20px] lg:mb-0">Terms</p>
-        </div>
-        <div className="flex justify-center">
-          <img src={social1} alt="" className="px-[10px] w-[52px]" />
-          <img src={social2} alt="" className="px-[10px] w-[52px]" />
-          <img src={social3} alt="" className="px-[10px] w-[52px]" />
-        </div>
-      </div>
+      </footer>
     </div>
+    </>
   );
 };
 
