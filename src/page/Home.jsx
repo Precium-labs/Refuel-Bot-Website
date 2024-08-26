@@ -405,8 +405,8 @@ const Home = () => {
           </div>
           <div className="flex space-x-4">
             <img src={social1} alt="" className="w-6 h-6" />
-            <img src={social2} alt="" className="w-6 h-6" />
-            <img src={social3} alt="" className="w-6 h-6" />
+            <img src={social2} alt="" className="w-6 h-6" onClick={() => window.location.href = 'https://t.me/RefuelPreciumbot'} />
+            <img src={social3} alt="" className="w-6 h-6" onClick={() => window.location.href = 'https://x.com/refuelbot?s=11'}/>
           </div>
         </div>
       </footer>
