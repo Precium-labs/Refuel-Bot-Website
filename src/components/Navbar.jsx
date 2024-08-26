@@ -33,10 +33,10 @@ const Navbar = () => {
           <li className="p-4">
             <p className="text-black" >How it works</p>
           </li>
-          <li className="p-4">
+          <li className="p-4" >
             <p className="text-black">Twitter</p>
           </li>
-          <div className="yellow_btn">
+          <div className="yellow_btn" onClick={() => window.location.href = 'https://t.me/RefuelPreciumbot'}>
            <p>Get Started</p>
      </div>
         </ul>
@@ -65,10 +65,10 @@ const Navbar = () => {
               <p >How it works</p>
               </li>
             <li className="p-4 text-xl hover:text-gray-500">
-              <p >Twitter</p>
+              <p onClick={() => window.location.href = 'https://x.com/refuelbot'} >Twitter</p>
             </li>
-            <div className="yellow_btn">
-           <p>Get Started</p>
+            <div className="yellow_btn" onClick={() => window.location.href = 'https://t.me/RefuelPreciumbot'}>
+           <p >Get Started</p>
         </div>
           </ul>
         </div>
