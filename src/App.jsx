@@ -1,10 +1,15 @@
 import Home from "./page/Home";
+import Navbar from "./components/Navbar"
 
 function App() {
   return (
-    <div>
+    <>
+    <Navbar />
+    <div className="w-full mt-16">
+    
       <Home />
     </div>
+    </>
   );
 }
 
